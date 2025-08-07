@@ -166,6 +166,7 @@ impl<'tcx> LateLintPass<'tcx> for NeedlessBool {
                     applicability,
                 );
             };
+
             if let Some(a) = fetch_bool_block(then)
                 && let Some(b) = fetch_bool_block(else_expr)
             {
