@@ -74,11 +74,15 @@ fn is_inside_unawaited_async_block(cx: &LateContext<'_>, expr: &Expr<'_>) -> boo
         if let Node::Expr(Expr {
             kind:
                 ExprKind::Closure(Closure {
+<<<<<<< HEAD
                     kind:
                         ClosureKind::Coroutine(CoroutineKind::Desugared(
                             CoroutineDesugaring::Async,
                             CoroutineSource::Block | CoroutineSource::Closure,
                         )),
+=======
+                    kind: ClosureKind::Coroutine(CoroutineKind::Desugared(CoroutineDesugaring::Async, _)),
+>>>>>>> 71b79ab46 (Merge commit '877967959ae8da9814df4f2614971f4d784bf53f' into clippy-subtree-update)
                     ..
                 }),
             ..
